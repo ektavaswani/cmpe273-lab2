@@ -70,10 +70,14 @@ function put(request, response) {
 	var cookies = request.cookies;
 	if ('session_id' in cookies) {
 		var sid = cookies['session_id'];
+		console.log(sid);
 		var name=login.getName(sid);
+		console.log(name);
 		var email=login.getEmail(sid);
+		console.log(email);
 		login.logout(sid);
 		var newSessionId = login.login(name, email);
+		console.log(newSessionId);
 		response.setHeader('Set-Cookie', 'session_id=' + newSessionId);		
 	} 
 	response.end("Re-freshed session id\n");
