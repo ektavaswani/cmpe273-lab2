@@ -60,7 +60,7 @@ function del(request, response) {
 		login.logout(sid);
 	}
 	else{
-		response.end(“Cannot log out”);
+		response.end("Cannot log out ");
 	}
  	// No need to set session id in the response cookies since you just logged out!
 
