@@ -59,6 +59,9 @@ function del(request, response) {
 		var sid = cookies['session_id'];
 		login.logout(sid);
 	}
+	else{
+		response.end(“Cannot log out”);
+	}
  	// No need to set session id in the response cookies since you just logged out!
 
   	response.end('Logged out from the server\n');
