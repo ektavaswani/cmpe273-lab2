@@ -47,15 +47,15 @@ Login.prototype.logout = function(sessionId) {
 	*/
 };
 /**
-*
+* get name for given session id
 */
-Login.prototype.getName(sessionId) {
+Login.prototype.getName=function(sessionId) {
 return this.sessionMap[sessionId].name;
 };
 /**
-*
+* Get email for given session id
 */
-Login.prototype.getEmail(sessionId) {
+Login.prototype.getEmail=function(sessionId) {
 return this.sessionMap[sessionId].email;
 };
 
