@@ -42,7 +42,7 @@ Login.prototype.login = function(_name, _email) {
  */ 
 Login.prototype.logout = function(sessionId) {
 	console.log('logout::' + sessionId);
-   	DELETE this.sessionMap[sessionId];
+   	delete this.sessionMap[sessionId];
 };
 /**
 * get name for given session id
